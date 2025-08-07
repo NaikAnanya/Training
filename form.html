@@ -3,6 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <title>Sample Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: #d7d0d0;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+      border: 1px solid #5d5d5d;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* Radio and checkbox styling */
+    .option-group {
+      margin-top: 10px;
+    }
+
+    .option-group label {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: normal;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+      transform: scale(1.1);
+    }
+
+    /* Centering the button container */
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="reset"] {
+      background-color: #f44336;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,31 +114,40 @@
     <fieldset>
       <legend>Personal Information</legend>
 
-      <label for="name">Full Name:</label><br>
-      <input type="text" id="name" name="fullname" required><br>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="fullname" required>
 
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob">
 
-      <label for="dob">Date of Birth:</label><br>
-      <input type="date" id="dob" name="dob"><br>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label>Gender:</label>
+      <div class="option-group">
+        <label><input type="radio" name="gender" value="male">Male</label>
+        <label><input type="radio" name="gender" value="female">Female</label>
+        <label><input type="radio" name="gender" value="other">Other</label>
+      </div>
 
     </fieldset>
 
     <!-- Fieldset 2 -->
     <fieldset>
-      <legend>Account Details</legend>
+      <legend>Details</legend>
 
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username"><br>
-  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-      <label for="password">Password:</label><br>
-      <input type="password" id="password" name="password"><br>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
 
-      <label for="phone">Phone Number:</label><br>
-      <input type="tel" id="phone" name="phone"><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
 
+      
+
+      
     </fieldset>
 
     <!-- Fieldset 3 -->
@@ -55,16 +164,26 @@
           <option value="germany">Germany</option>
           <option value="france">France</option>
         </optgroup>
-      </select><br>
+      </select>
 
-      <label for="about">Tell us about yourself:</label><br>
+      <label>Interests:</label>
+      <div class="option-group">
+        <label><input type="checkbox" name="interests" value="coding">Coding</label>
+        <label><input type="checkbox" name="interests" value="sports">Sports</label>
+        <label><input type="checkbox" name="interests" value="music">Music</label>
+        <label><input type="checkbox" name="interests" value="travel">Travel</label>
+      </div>
+
+      <label for="about">Tell us about yourself:</label>
       <textarea id="about" name="about" rows="4" cols="50" placeholder="Write something..."></textarea>
 
     </fieldset>
 
-    <!-- Buttons -->
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
+    <!-- Centered Buttons -->
+    <div class="button-container">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
 
   </form>
 
