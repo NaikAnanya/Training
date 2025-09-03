@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="page.css" >
+</head>
+<body>
+  <header id="header"></header>
+  <div class="sidebar" id="sidebar"></div>
+  <main id="main"></main>
+  <div class="right" id="right"></div>
+  <footer id="footer"></footer>
+
+  <script>
+    // HEADER
+    document.getElementById("header").innerHTML = `
+      <h1>Ananya Naik</h1>
+      <p>
+        <a href="#">GitHub</a> | 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Instagram</a>
+      </p>
+    `;
+
+    // SIDEBAR
+    document.getElementById("sidebar").innerHTML = `
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>HTML & CSS</li>
+      </ul>
+      <h2>About Me</h2>
+      <p>I am a web developer passionate about coding.</p>
+      <h2>Contact</h2>
+      <p>Email: mymail@gmail.com</p>
+    `;
+
+    // MAIN
+    document.getElementById("main").innerHTML = `
+      <h2>Experience</h2>
+      <p>Worked on several projects in web.</p>
+      <h2>Education</h2>
+      <p>Bachelor's in Engineering</p>
+     
+    `;
+
+    // RIGHT SIDE
+    document.getElementById("right").innerHTML = `
+      <h2>Projects</h2>
+      <ul>
+        <li>Portfolio Website</li>
+        <li>Machine Learning Model</li>
+        <li>Todo App</li>
+      </ul>
+    `;
+
+    // FOOTER
+    document.getElementById("footer").innerHTML = `
+      <p>Contact Me: mymail@gmail.com</p>
+    `;
+  </script>
+</body>
+</html>
